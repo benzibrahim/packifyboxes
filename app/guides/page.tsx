@@ -1,0 +1,5 @@
+import {guides,origin} from '@/lib/content';
+import {ArrowUpRight} from 'lucide-react';
+import {CTA} from '@/components/site-shell';
+export const metadata={title:'Packaging guides & resources | PackifyBoxes',description:'Practical guides to box selection, print-ready artwork and packaging materials.',alternates:{canonical:origin+'/guides'}};
+export default function Guides(){return <main id="main"><section className="wrap page-intro"><div className="eyebrow">THE PACKAGING NOTEBOOK</div><h1>A little knowledge.<br/><em>A better box.</em></h1><p>Make more confident packaging decisions with practical notes on structure, print, materials and the questions worth asking.</p></section><section className="wrap section guide-grid">{guides.map((g,i)=><a className="guide-card" href={'/guides/'+g.slug} key={g.slug}><span className="guide-number">0{i+1}</span><div className="eyebrow">{g.category}</div><h3>{g.title}</h3><p>{g.intro}</p><span className="text-link">Read the guide <ArrowUpRight size={16}/></span></a>)}</section><CTA/></main>}

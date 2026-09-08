@@ -1,0 +1,3 @@
+import {env} from 'cloudflare:workers';
+export function bindings(){return env as unknown as {DB:D1Database;FILES:R2Bucket};}
+export async function database(){const{DB}=bindings();if(!DB)throw new Error('Quote storage unavailable');await DB.batch([DB.prepare('CREATE TABLE IF NOT EXISTS quotes (id TEXT PRIMARY KEY NOT NULL, created_at INTEGER NOT NULL, name TEXT NOT NULL, email TEXT NOT NULL, company TEXT, phone TEXT, product TEXT NOT NULL, quantity INTEGER NOT NULL, details TEXT NOT NULL, file_key TEXT, file_name TEXT, consent_version TEXT NOT NULL)'),DB.prepare('CREATE TABLE IF NOT EXISTS request_limits (key TEXT PRIMARY KEY NOT NULL, count INTEGER NOT NULL, expires INTEGER NOT NULL)')]);return DB;}

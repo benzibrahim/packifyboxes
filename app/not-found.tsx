@@ -1,0 +1,1 @@
+export default function NotFound(){return <main id="main" className="wrap section"><div className="eyebrow">404 — A LITTLE OUTSIDE THE BOX</div><h1>This page isn’t here.</h1><p>Let’s get you back to the packaging collection.</p><a className="btn" href="/products">Explore packaging →</a></main>}
