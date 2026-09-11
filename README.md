@@ -2,7 +2,7 @@
 
 A custom packaging marketing site based on the existing PackifyBoxes branding and the supplied website audit.
 
-Includes a filterable six-category catalog, product detail pages, three buying guides, materials and finishes, company/contact pages, FAQs, privacy/terms/shipping pages, and a quote request form.
+Includes a filterable packaging catalog with the original burger-box product, product detail pages, three buying guides, materials and finishes, company/contact pages, FAQs, privacy/terms/shipping pages, and a quote request form.
 
 ## Operations
 
@@ -11,7 +11,7 @@ Includes a filterable six-category catalog, product detail pages, three buying g
 - Email notifications are not configured. The contact link opens the visitor’s email application; submission itself saves to D1. Connect a transactional email provider before relying on email alerts.
 - No public endpoint exposes submitted quotes or reference files. There is no customer account area or checkout.
 - Policy text is a draft for business review. Confirm commercial shipping, cancellation and refund terms before public launch. No unverified company address, ratings, testimonials, production capacity or certifications are asserted.
-- Collection imagery and the social preview are reused from the owner’s original website. Collection imagery is labeled illustrative. Replace it with verified, style-specific portfolio photographs when available.
+- The original orange theme, Epilogue and Urbanist fonts, homepage structure, logo, hero, burger-box product photo and social preview are reused from the owner’s original website. Collection imagery is labeled illustrative. Replace it with verified, style-specific portfolio photographs when available.
 - The canonical origin is centralized in `lib/content.ts`. Update it and the allowed form origin when connecting the final production domain. The current deployment is private for owner review.
 
 ## Development
